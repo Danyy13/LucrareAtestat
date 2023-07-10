@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Grands Prix</title>
+	<link rel="stylesheet" href="../style.css">
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<!-- !! https://www.motorsportuk.org/get-started/types-of-motor-sport/ -->
+
+<body>
+	<!-- <div class="nav">
+			<ul class="menu">
+				<a href="https://www.wrc.com/en/"><li>WRC</li></a>
+				<a href=""><li>EXTREME E</li></a>
+				<a href=""><li>F1</li></a>
+				<a href=""><li>GROOT</li></a>
+			</ul>
+		</div> -->
+	<!-- <canvas id="circle" style="position: absolute; width: 100%; height: 100%; background-color: red;"></canvas> -->
+	<!-- <div class="grid-container">
+			<div class="grid-item 1">1</div>
+			<div class="grid-item 1">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div> -->
+
+
+	<!-- <h1>Simple Pure CSS Drop Down Menu</h1> -->
+	<nav id="primary_nav_wrap">
+		<div class="dead-space"></div>
+		<ul>
+			<li><a href="index.html">Acasă</a></li>
+			<li><a href="#">Raliu</a>
+				<ul>
+					<li><a href="wrc.html">WRC</a>
+						<ul>
+							<li><a href="wrc-standings.html">Clasament</a></li>
+						</ul>
+					</li>
+					<li><a href="vitezaincoasta.html">Viteza in Coasta</a></li>
+					<li><a href="extr.html">EXTREME E</a></li>
+				</ul>
+			</li>
+			<li class="current-menu-item"><a href="#">Circuit</a>
+				<ul>
+					<li><a href="formula.html">Formula 1</a>
+						<ul>
+							<li><a href="formula-curse.html">Grands Prix</a></li>
+							<li><a href="formula-standings.html">Clasament</a></li>
+						</ul>
+					</li>
+					<li><a href="nascar.html">NASCAR</a></li>
+					<li><a href="fe.html">Formula E</a></li>
+				</ul>
+			</li>
+			<li><a href="drag.html">Drag Racing</a>
+			</li>
+			<li><a href="#">Anduranță</a>
+				<ul>
+					<li class="dir"><a href="lemans.html">24H Le Mans</a></li>
+				</ul>
+			</li>
+			<li><a href="drift.html">Drift</a></li>
+			<li><a href="karting.html">Karting</a></li>
+			<!-- <li><a href="SD Car/index.html">Inscrie-te</a></li> -->
+			<li><a href="form.html">Înscrieri</a></li>
+		</ul>
+	</nav>
+
+	<p style="position: relative; font-size: 24px; color:#333">
+		Prezentarea Grands Prix ale sezonului 2023 <br> Apasă pe hartă pentru a filtra cursele in funcție de continent
+	</p>
+
+	<div>
+		<img id="mapworld" src="../Media/harta-lumii.jpg" usemap="#world-map"
+			style="width: 1280px; height: auto; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 72px; position: relative;">
+	</div>
+	<map name="world-map">
+		<area id="NA" shape="rect" coords="60, 250, 425, 550" onclick="show('.NA');">
+		<area id="SA" shape="rect" coords="330, 550, 500, 800" onclick="show('.SA')">
+		<area id="EUR" shape="poly"
+			coords="560,460, 640,450, 650,465, 690,470, 705,415, 735,415, 695,350, 705,260, 540,260, 500,320"
+			onclick="show('.EUR')">
+		<!-- <area id="AFR" shape="poly"
+			coords="560,460, 640,450, 650,465, 715,475, 750,555, 780,550, 775,720, 640,720, 630,580, 545,580, 545,505"
+			onclick="show('.AFR')"> -->
+		<area id="ASIA" shape="poly"
+			coords="705,260, 695,350, 735,415, 705,415, 690,470, 715,475, 750,555, 810,510, 890,630, 1025,630, 1070,620, 1070,595, 1020,510, 1255,280, 905,90"
+			onclick="show('.ASIA')">
+		<area id="AUS" shape="poly" coords="970,625, 1070,620, 1070,575, 1140,575, 1200,730, 1160,790, 970,715"
+			onclick="show('.AUS')">
+	</map>
+
+	<h1 class="continent-heading NA">America de Nord</h1>
+	<div class="flex-container NA" style="justify-content: flex-start;">
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Miami</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-miami.png" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Pirelli Canada</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-can.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">SUA</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-lenovo.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Mexic</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-mex.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Las Vegas</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-lv.jpeg" class="flex-image" width="100%">
+			</div>
+		</div>
+	</div>
+
+	<h1 class="continent-heading SA">America de Sud</h1>
+	<div class="flex-container SA" style="justify-content: flex-start;">
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Brazilia</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-bra.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+	</div>
+
+	<h1 class="continent-heading EUR">Europa</h1>
+	<div class="flex-container EUR" style="justify-content: flex-start;">
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Emilia-Romagna</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-emrom.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Monaco</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-mon.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Spania</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-sp.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Austria</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-austria.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Marea Britanie</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-gb.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Ungaria</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-hun.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Belgia</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-belg.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Olanda</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-neth.jpeg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Italia</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-it.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+	</div>
+
+	<h1 class="continent-heading ASIA">Asia</h1>
+	<div class="flex-container ASIA" style="justify-content: flex-start;">
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Bahrain</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-bah.jpeg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Arabia Saudita</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-saudi.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Azerebaijan</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-azer.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Singapore</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-sing.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Japonia</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-japan.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Qatar</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-qat.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Abu Dhabi</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-abu.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+	</div>
+
+	<h1 class="continent-heading AUS">Australia</h1>
+	<div class="flex-container AUS" style="justify-content: flex-start;">
+		<div class="flex-gp">
+			<p style="text-align: center; font-weight: bold">Australia</p>
+			<div style="position: relative;">
+				<img src="../Media/f1-aus.jpg" class="flex-image" width="100%">
+			</div>
+		</div>
+	</div>
+
+	<img onclick="topFunction()" id="scroll-button" src="../Media/arrow.png">
+
+	<script src="../topButton.js"></script>
+	<script src="../f1.js"></script>
+
+</body>
+
+</html>

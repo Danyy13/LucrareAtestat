@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Înscrieri</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .grid-container {
+            margin-top: 62px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 300px;
+            background-color: #2196F3;
+            padding: 5px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<!-- !! https://www.motorsportuk.org/get-started/types-of-motor-sport/ -->
+
+<body>
+
+    <!-- <h1>Simple Pure CSS Drop Down Menu</h1> -->
+    <nav id="primary_nav_wrap">
+		<div class="dead-space"></div>
+		<ul>
+			<li><a href="index.html">Acasă</a></li>
+			<li><a href="#">Raliu</a>
+				<ul>
+					<li><a href="wrc.html">WRC</a>
+						<ul>
+							<li><a href="wrc-standings.html">Clasament</a></li>
+						</ul>
+					</li>
+					<li><a href="vitezaincoasta.html">Viteza in Coasta</a></li>
+					<li><a href="extr.html">EXTREME E</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Circuit</a>
+				<ul>
+					<li><a href="formula.html">Formula 1</a>
+						<ul>
+							<li><a href="formula-curse.html">Grands Prix</a></li>
+							<li><a href="formula-standings.html">Clasament</a></li>
+						</ul>
+					</li>
+					<li><a href="nascar.html">NASCAR</a></li>
+					<li><a href="fe.html">Formula E</a></li>
+				</ul>
+			</li>
+			<li><a href="drag.html">Drag Racing</a>
+			</li>
+			<li><a href="#">Anduranță</a>
+				<ul>
+					<li class="dir"><a href="lemans.html">24H Le Mans</a></li>
+				</ul>
+			</li>
+			<li><a href="drift.html">Drift</a></li>
+			<li><a href="karting.html">Karting</a></li>
+			<!-- <li><a href="SD Car/index.html">Inscrie-te</a></li> -->
+			<li class="current-menu-item"><a href="form.html">Înscrieri</a></li>
+		</ul>
+	</nav>
+
+    <!-- https://www.brt-kart.com/karting/ -->
+
+    <div class="flex-container" style="margin-top: 62px;">
+        <div class="flex-form" id="forms">
+            <h2 style="text-align: center;">Formular înscriere karting</h2>
+            <form action="process-form.php" method="POST">
+                <label for="parent_name"><p>Numele complet al părintelui:</p></label>
+                <input type="text" id="parent_name" name="parent_name" required><br><br>
+
+                <label for="child_name">Numele complet al copilului:</label>
+                <input type="text" id="child_name" name="child_name" required><br><br>
+
+                <label for="age">Vârstă:</label>
+                <input type="number" id="age" name="age" required><br><br>
+
+                <label for="height">Înălțime:</label>
+                <input type="text" id="height" name="height" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Telefon:</label>
+                <input type="text" id="phone" name="phone" required><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="flex-div" id="redmotor">
+            <h2 style="text-align: center;">Locație</h2>
+            <iframe class="live-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2785.785022991075!2d21.1873003766914!3d45.71534941664591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455c4e1b9c1a8f%3A0x66fedaa656ad045b!2sRed%20Motor!5e0!3m2!1sen!2sro!4v1682371794375!5m2!1sen!2sro"
+                style="border:0; width: 100%; height: 50%;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <img onclick="topFunction()" id="scroll-button" src="../Media/arrow.png">
+
+	<script src="../topButton.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Pagina Principală</title>
+	<link rel="stylesheet" href="../style.css">
+</head>
+
+<!-- !! https://www.motorsportuk.org/get-started/types-of-motor-sport/ -->
+
+<body>
+	<!-- <div class="nav">
+			<ul class="menu">
+				<a href="https://www.wrc.com/en/"><li>WRC</li></a>
+				<a href=""><li>EXTREME E</li></a>
+				<a href=""><li>F1</li></a>
+				<a href=""><li>GROOT</li></a>
+			</ul>
+		</div> -->
+	<!-- <canvas id="circle" style="position: absolute; width: 100%; height: 100%; background-color: red;"></canvas> -->
+	<!-- <div class="grid-container">
+			<div class="grid-item 1">1</div>
+			<div class="grid-item 1">2</div>
+			<div class="grid-item">3</div>
+			<div class="grid-item">4</div>
+			<div class="grid-item">5</div>
+			<div class="grid-item">6</div>
+			<div class="grid-item">7</div>
+			<div class="grid-item">8</div>
+			<div class="grid-item">9</div>
+		</div> -->
+
+
+	<!-- <h1>Simple Pure CSS Drop Down Menu</h1> -->
+	<nav id="primary_nav_wrap">
+		<div class="dead-space"></div>
+		<ul>
+			<li class="current-menu-item"><a href="index.html">Acasă</a></li>
+			<li><a href="#">Raliu</a>
+				<ul>
+					<li><a href="wrc.html">WRC</a>
+						<ul>
+							<li><a href="wrc-standings.html">Clasament</a></li>
+						</ul>
+					</li>
+					<li><a href="vitezaincoasta.html">Viteza in Coasta</a></li>
+					<li><a href="extr.html">EXTREME E</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Circuit</a>
+				<ul>
+					<li><a href="formula.html">Formula 1</a>
+						<ul>
+							<li><a href="formula-curse.html">Grands Prix</a></li>
+							<li><a href="formula-standings.html">Clasament</a></li>
+						</ul>
+					</li>
+					<li><a href="nascar.html">NASCAR</a></li>
+					<li><a href="fe.html">Formula E</a></li>
+				</ul>
+			</li>
+			<li><a href="drag.html">Drag Racing</a>
+			</li>
+			<li><a href="#">Anduranță</a>
+				<ul>
+					<li class="dir"><a href="lemans.html">24H Le Mans</a></li>
+				</ul>
+			</li>
+			<li><a href="drift.html">Drift</a></li>
+			<li><a href="karting.html">Karting</a></li>
+			<!-- <li><a href="SD Car/index.html">Inscrie-te</a></li> -->
+			<li><a href="form.html">Înscrieri</a></li>
+		</ul>
+	</nav>
+
+	<div class="slideshow-container" style="margin-top: 10px;">
+		<div class="mySlides fade">
+			<img src="../Media/wrc-main.jpg" style="width:100%">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="../Media/formula1-main.jpg" style="width:100%">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="../Media/extreme-main.jpg" style="width:100%">
+		</div>
+	</div>
+	<br>
+
+	<div style="text-align:center; margin-top: -50px">
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+
+	<p class="main-text">Sporturile cu motor sunt un grup de evenimente sportive competitive care implică utilizarea
+		vehiculelor motorizate. Sportul cu motor a fost inclus în evenimentele demonstrative de la Jocurile Olimpice de
+		vară din 1900.
+	</p>
+
+	<div class="wrap">
+		<div class="split top left">
+			<a href="wrc.html">
+				<img class="card" id="card1" src="../Media/toyota-wrc.jpg">
+				<div class="image-text centered">WRC</div>
+			</a>
+		</div>
+		<div class="split top right">
+			<a href="extr.html">
+				<img class="card" id="card2" src="../Media/x44-extreme-e.jpg">
+				<div class="image-text centered">EXTREME E</div>
+			</a>
+		</div>
+		<div class="split bottom left">
+			<a href="formula.html">
+				<img class="card" id="card3" src="../Media/f1.jpg">
+				<div class="image-text centered">FORMULA 1</div>
+			</a>
+		</div>
+		<div class="split bottom right">
+			<a href="nascar.html">
+				<img class="card" id="card4" src="../Media/nascar.jpg">
+				<div class="image-text centered">NASCAR</div>
+			</a>
+		</div>
+	</div>
+
+	<img onclick="topFunction()" id="scroll-button" src="../Media/arrow.png">
+
+	<script>
+		let slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			let i;
+			let slides = document.getElementsByClassName("mySlides");
+			let dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) { slideIndex = 1 }
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+			setTimeout(showSlides, 4000); // Change image every 4 seconds
+		}
+	</script>
+	<script src="../topButton.js"></script>
+</body>
+
+</html>
